@@ -1,6 +1,15 @@
 document.getElementById('fishButton').addEventListener('click', () => {
     const fishRarity = Math.random();
     let result = '';
+    
+    // Visser animatie
+    const fisherman = document.getElementById('fisherman');
+    fisherman.style.transform = 'translateX(-50%) translateY(-50px)';
+    
+    // Reset de animatie na een korte tijd
+    setTimeout(() => {
+        fisherman.style.transform = 'translateX(-50%)';
+    }, 500);
 
     if (fishRarity < 0.5) {
         result = 'You caught a common fish!';
